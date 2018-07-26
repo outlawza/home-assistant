@@ -1,7 +1,7 @@
-pipeline {
+git pipeline {
     agent any
     stages{
-        stage('I nit){
+        stage('Init'){
             steps {
                 echo 'Testing...'
             }
