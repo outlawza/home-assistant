@@ -1,4 +1,4 @@
-git pipeline {
+pipeline {
     agent any
     stages{
         stage('Init'){
