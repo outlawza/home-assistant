@@ -10,6 +10,13 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'Biilding...'
+                sh 'mvn clean package'
+            }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
             }
         }
 
